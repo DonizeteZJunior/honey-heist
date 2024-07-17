@@ -1,9 +1,16 @@
 interface ColunaProps{
-    titulo: string
+    titulo?: string
 }
 
 export default function Coluna(props: ColunaProps){
     return(
-        <h1>Coluna Numerica</h1>
+        <ul className="flex flex-col">
+            <li>6</li>
+            <li>5</li>
+            <li>4</li>
+            <li>3</li>
+            <li>2</li>
+            <li>1</li>
+        </ul>
     )
 }
