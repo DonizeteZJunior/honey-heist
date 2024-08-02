@@ -1,14 +1,14 @@
-export default class Ficha {
+export default class FichaModel {
     #nome: string
     #tipo: string
     #categoria: string
     #funcao: string
     #chapeu: string
-    #urso: 1 | 2 | 3 | 4 | 5 | 6
-    #ladrao: 1 | 2 | 3 | 4 | 5 | 6
+    #urso: number
+    #ladrao: number
 
     constructor(nome: string, tipo: string, categoria: string, funcao: string, chapeu: string,
-                urso: 3, ladrao: 3)
+                urso:number = 3, ladrao:number = 3)
     {
         this.#nome = nome
         this.#tipo = tipo
@@ -20,7 +20,7 @@ export default class Ficha {
     }
 
     static vazio(){
-        return new Ficha('','','','','',3,3)
+        return new FichaModel('','','','','',3,3)
     }
 
     get nome(){
@@ -49,5 +49,21 @@ export default class Ficha {
 
     get ladrao(){
         return this.#ladrao
+    }
+
+    aumentoUrso(){
+        if(this.urso < 6 && this.urso > 1){
+            const nroUrso = this.urso + 1
+            const nroLadrao = this.ladrao - 1
+            return new FichaModel(this.nome,this.tipo,this.categoria,this.funcao,this.chapeu,nroUrso,nroLadrao)
+        }     
+    }
+
+    aumentoLadrao(){
+        if(this.ladrao < 6 && this.ladrao > 1){
+            const nroUrso = this.urso - 1
+            const nroLadrao = this.ladrao + 1
+            return new FichaModel(this.nome,this.tipo,this.categoria,this.funcao,this.chapeu,nroUrso,nroLadrao)
+        }
     }
 }
