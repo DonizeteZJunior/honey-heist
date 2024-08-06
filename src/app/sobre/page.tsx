@@ -21,7 +21,7 @@ export default function Sobre(){
                         que fez a tradução do mesmo. 
                     </p>
                     <p className="px-4 py-2">
-                        &ensp; Espero que se divirtam usando a ficha do site e que sirva de isnpiração para que aja mais projetos
+                        &ensp; Espero que se divirtam usando a ficha do site e que sirva de inspiração para que aja mais projetos
                         que abracem fichas de outros sistemas de bolso.
                     </p>
                     <p className="px-4 py-2">

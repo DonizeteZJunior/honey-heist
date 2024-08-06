@@ -8,7 +8,8 @@ export default function Home() {
         <div className="flex flex-row text-center justify-center mt-12">
           <h1 className="text-[40px] font-bold">Boas Vindas!</h1>
         </div>
-        <div className="w-[80vh] mt-5 flex flex-1 grow text-center text-balance text-[20px]">
+        <div className={`w-[20vh] sm:w-[80vh] mt-5 flex sm:flex-1 grow 
+                         justify-center text-center text-balance text-[20px]`}>
           <p> 
             Este site foi feito se baseando na tradução feita pela 
             <a className="font-bold px-1" target="_blank" href="https://panfletinhos.itch.io/oroubodomel">Panfletinhos</a> 

@@ -25,7 +25,7 @@ export default function Input(props: InputProps){
                         <p className="text-gray-700 text-md">{props.label}</p>
                         <input type={props.tipo ?? 'text'} value={props.valor} 
                             onChange={e => props.valorMudou?.(e.target.value)} 
-                            className={`border border-zinc-600 rounded-md w-72
+                            className={`border border-zinc-600 rounded-md w-44 sm:w-48 md:w-72
                                         focus:outline-yellow-950 bg-gray-50 px-4 py-2`}/>
                     </label>
                 )
