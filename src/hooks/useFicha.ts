@@ -6,14 +6,13 @@ export default function useFicha(){
     const [ficha, setFicha] = useState<Ficha>(Ficha.vazio())
 
     function salvarFicha(fichaASalvar: Ficha){
-        setFicha(fichaASalvar)
-        const fichaJSON = { nome: ficha.nome,
-                            tipo: ficha.tipo,
-                            categoria: ficha.categoria,
-                            funcao: ficha.funcao,
-                            chapeu: ficha.chapeu,
-                            urso: ficha.urso,
-                            ladrao: ficha.ladrao }
+        const fichaJSON = { nome: fichaASalvar.nome,
+                            tipo: fichaASalvar.tipo,
+                            categoria: fichaASalvar.categoria,
+                            funcao: fichaASalvar.funcao,
+                            chapeu: fichaASalvar.chapeu,
+                            urso: fichaASalvar.urso,
+                            ladrao: fichaASalvar.ladrao }
         localStorage.setItem('ficha',JSON.stringify(fichaJSON))
     }
 

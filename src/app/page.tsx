@@ -3,10 +3,10 @@ import Background from "../../public/background.jpg"
 
 export default function Home() {
   return (
-    <Pagina titulo="Página Inicial" subtitulo="Estamos contruindo algo aqui" imagemFundo={Background.src} >
+    <Pagina titulo="Home" subtitulo="Página inicial do site" imagemFundo={Background.src} >
       <div className='flex flex-col justify-center items-center text-gray-200'>
         <div className="flex flex-row text-center justify-center mt-12">
-          <h1 className="text-[40px] font-bold">Seja Bem-Vinda!</h1>
+          <h1 className="text-[40px] font-bold">Boas Vindas!</h1>
         </div>
         <div className="w-[80vh] mt-5 flex flex-1 grow text-center text-balance text-[20px]">
           <p> 

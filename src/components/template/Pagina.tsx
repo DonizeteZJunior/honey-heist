@@ -6,6 +6,7 @@ interface LayoutProps{
     titulo: string
     subtitulo:string
     imagemFundo?: string
+    style?: string
     children: any
 }
 
@@ -24,7 +25,7 @@ export default function Layout(props: LayoutProps){
                         {props.children}
                     </main>
                 : 
-                    <main className={`p-7 flex-1`}>
+                    <main className={`p-7 flex-1 justify-center items-center`}>
                         {props.children}
                     </main>
                 }

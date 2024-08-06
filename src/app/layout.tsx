@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const lato = Lato({
   weight: ['100','300','400','700','900'],
@@ -20,9 +22,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any"></link>
+        <link rel="icon" href="/logo.ico" sizes="any"></link>
       </head>
-      <body className={lato.className}>{children}</body>
+      <body className={lato.className}>
+        <ToastContainer />
+        {children}
+      </body>
     </html>
   );
 }
