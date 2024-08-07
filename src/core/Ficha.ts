@@ -51,19 +51,4 @@ export default class FichaModel {
         return this.#ladrao
     }
 
-    aumentoUrso(){
-        if(this.urso < 6 && this.urso > 1){
-            const nroUrso = this.urso + 1
-            const nroLadrao = this.ladrao - 1
-            return new FichaModel(this.nome,this.tipo,this.categoria,this.funcao,this.chapeu,nroUrso,nroLadrao)
-        }     
-    }
-
-    aumentoLadrao(){
-        if(this.ladrao < 6 && this.ladrao > 1){
-            const nroUrso = this.urso - 1
-            const nroLadrao = this.ladrao + 1
-            return new FichaModel(this.nome,this.tipo,this.categoria,this.funcao,this.chapeu,nroUrso,nroLadrao)
-        }
-    }
 }

@@ -37,6 +37,22 @@ export default function Ficha(){
         setLadrao(ficha?.ladrao ?? 3)
     }
 
+    function alterandoUrso(e:number){
+        if (e >= 0 && e <= 6){
+            const outraColuna = 6 - e
+            setUrso(e)
+            setLadrao(outraColuna)
+        }
+    }
+
+    function alterandoLadrao(e:number){
+        if (e >= 0 && e <= 6){
+            const outraColuna = 6 - e
+            setLadrao(e)
+            setUrso(outraColuna)
+        }
+    }
+
     function salvandoFicha(){
         salvarFicha(new FichaModel(nome,tipo,categoria,funcao,chapeu,urso,ladrao))
         UseNotificacao('Ficha salva com sucesso!')
@@ -53,7 +69,7 @@ export default function Ficha(){
         <Pagina titulo="Ficha" subtitulo="Ficha de jogo para os players">
             <section className="flex flex-row justify-center">
                 <div className="flex flex-col text-center">
-                    <Input label="Urso" valor={urso} tipo="number" valorMudou={setUrso} />
+                    <Input label="Urso" valor={urso} tipo="number" valorMudou={alterandoUrso} />
                 </div>
                 <div className="flex flex-col">
                     <Input label="Nome" valor={nome} tipo="text" valorMudou={setNome} />
@@ -63,7 +79,7 @@ export default function Ficha(){
                     <Input label="Chapéu" valor={chapeu} tipo="text" valorMudou={setChapeu} />
                 </div>
                 <div className="flex flex-col text-center">
-                    <Input label="Ladrão" valor={ladrao} tipo="number" valorMudou={setLadrao} />
+                    <Input label="Ladrão" valor={ladrao} tipo="number" valorMudou={alterandoLadrao} />
                 </div>
             </section>
             <div className="flex flex-row justify-center mt-2">
