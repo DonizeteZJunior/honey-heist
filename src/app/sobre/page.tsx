@@ -15,7 +15,8 @@ export default function Sobre(){
                     <p className="px-4 py-2">
                         &ensp; Olá, sou apenas um jovem programador, parte de uma comunidade de RPG inclusiva (Role Cotidiano), 
                         praticando um pouco de NextJS/React aqui nesse site, o código do mesmo deixo de livre acesso no 
-                        GitHub e todos os direitos são reservados a <b>Grant Howitt</b> criador do RPG 
+                        <a href="https://github.com/DonizeteZJunior/honey-heist" target="_blank" className="text-yellow-800 font-bold">GitHub</a> e todos os direitos são 
+                        reservados a <b>Grant Howitt</b> criador do RPG 
                         <a href="https://gshowitt.itch.io/honey-heist" target="_blank" className="text-yellow-800 font-bold"> Honey Weist </a> 
                         e também a <a target="_blank" href="https://panfletinhos.itch.io/oroubodomel" className="text-yellow-800 font-bold">Panfletinhos </a>
                         que fez a tradução do mesmo. 
