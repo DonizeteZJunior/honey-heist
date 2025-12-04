@@ -15,7 +15,7 @@ export default function Input(props: InputProps){
                         <input type={props.tipo} value={props.valor} 
                             onChange={e => props.valorMudou?.(e.target.value)} 
                             className={`border-2 border-zinc-600 rounded-md w-16 h-16 px-3 py-3
-                                        focus:outline-yellow-950 bg-gray-50 text-[40px] `}/>
+                                        focus:outline-yellow-950 bg-gray-50 text-[30px] `}/>
                     </label>
                 )
                 break;
